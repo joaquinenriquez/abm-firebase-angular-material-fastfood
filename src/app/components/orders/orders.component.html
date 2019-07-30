@@ -1,0 +1,46 @@
+<div class="header-app">
+  <h1>Bienvenido a {{nombreApp}}</h1>
+</div>
+
+<div class="button-list">
+  <button mat-raised-button color="primary" class="myButton" *ngFor="let unproducto of this.productos" (click)="agregar(unproducto)">{{unproducto.nombre}} / {{unproducto.precio}} </button>
+</div>
+
+<form>
+
+  <table cellspacing="0">
+
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput #nroPedido maxlength="3" placeholder="Numero de pedido">
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput #cliente maxlength="15" placeholder="Cliente">
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button mat-raised-button color="primary" class="btn_send">Enviar</button>
+      </td>
+    </tr>
+
+  </table>
+
+</form>
+
+<ul class="coleccion">
+
+  <li *ngFor="let unArticulo of this.pedidoTemp; let i = index">
+    {{unArticulo.nombre}}
+    <a href="#" (click)="quitarArticulo(i)">Quitar</a>
+    <mat-icon>delete</mat-icon>
+  </li>
+</ul>

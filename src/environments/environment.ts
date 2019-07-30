@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyCfFD7R1UZ_FQJIdFJ78F4ZGGIsw2rreiI',
+    authDomain: 'app-comilonas.firebaseapp.com',
+    databaseURL: 'https://app-comilonas.firebaseio.com',
+    projectId: 'app-comilonas',
+    storageBucket: '',
+    messagingSenderId: '241305123208',
+    appId: '1:241305123208:web:489b4fc9ae2abb17'
+  }
 };
 
 /*
